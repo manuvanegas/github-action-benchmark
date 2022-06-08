@@ -527,7 +527,7 @@ function extractJuliaBenchmarkHelper([_, bench]: JuliaBenchmarkGroup, labels: st
             res.push({
                 name: [...labels, key].join('/'),
                 value: v[1].time,
-                unit: 'ns',
+                unit: 's',
                 extra: `gctime=${v[1].gctime}\nmemory=${v[1].memory}\nallocs=${v[1].allocs}\nparams=${JSON.stringify(
                     v[1].params[1],
                 )}`,
